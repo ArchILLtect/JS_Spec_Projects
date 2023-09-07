@@ -1,0 +1,82 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Basic JavaScript Slideshow</title>
+    </head>
+
+    <body>
+        <div>
+            <img src="image1.jpg" alt="slideshow image" id="myImage">
+            <p id="imageFoot">Image 1</p>
+        </div>
+        
+        <p><a href="#" id="previous">previous</a> --- <a href="#" id="next">next</a></p>
+        <script>
+
+            let goBack = document.getElementById('previous');
+            let goForward = document.getElementById('next');
+            let slideScreen = document.getElementById('myImage');
+            let currentSlide = slideScreen.getAttribute('src');
+            let imageFooter = document.getElementById('imageFoot');
+
+            goBack.addEventListener('click', function() {
+
+            if (currentSlide == "image1.jpg") {
+                alert('You are at the beginning!');
+                return currentSlide = slideScreen.getAttribute('src');
+            } else if (currentSlide == "image2.jpg") {
+                slideScreen.setAttribute('src', 'image1.jpg');
+                imageFooter.textContent = 'Image 1';
+                return currentSlide = slideScreen.getAttribute('src');
+            } else if (currentSlide == "image3.jpg") {
+                slideScreen.setAttribute('src', 'image2.jpg');
+                imageFooter.textContent = 'Image 2';
+                return currentSlide = slideScreen.getAttribute('src');
+            } else if (currentSlide == "image4.jpg") {
+                slideScreen.setAttribute('src', 'image3.jpg');
+                imageFooter.textContent = 'Image 3';
+                return currentSlide = slideScreen.getAttribute('src');
+            } else if (currentSlide == "image5.jpg") {
+                slideScreen.setAttribute('src', 'image4.jpg');
+                imageFooter.textContent = 'Image 4';
+                return currentSlide = slideScreen.getAttribute('src');
+            }
+            });
+
+            goForward.addEventListener('click', function() {
+
+            if (currentSlide == "image1.jpg") {
+                slideScreen.setAttribute('src', 'image2.jpg');
+                imageFooter.textContent = 'Image 2';
+                return currentSlide = slideScreen.getAttribute('src');
+            } else if (currentSlide == "image2.jpg") {
+                slideScreen.setAttribute('src', 'image3.jpg');
+                imageFooter.textContent = 'Image 3';
+                return currentSlide = slideScreen.getAttribute('src');
+            } else if (currentSlide == "image3.jpg") {
+                slideScreen.setAttribute('src', 'image4.jpg');
+                imageFooter.textContent = 'Image 4';
+                return currentSlide = slideScreen.getAttribute('src');
+            } else if (currentSlide == "image4.jpg") {
+                slideScreen.setAttribute('src', 'image5.jpg');
+                imageFooter.textContent = 'Image 5';
+                return currentSlide = slideScreen.getAttribute('src');
+            } else if (currentSlide == "image5.jpg") {
+                alert('You are at the end!');
+                return currentSlide = slideScreen.getAttribute('src');
+            }
+            });
+    /*
+            for ( let i = 1; i <= myImages.length; i++ ) {
+                slideScreen.setAttribute(src: `image${i}`)
+
+            }
+    */
+
+        </script>
+    </body>
+
+</html>

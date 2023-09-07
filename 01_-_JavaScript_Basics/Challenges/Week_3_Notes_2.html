@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript Events</title>
+        <style>
+            div {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+            }
+        </style>
+    </head>
+
+	<body>
+		<main>
+            <h1>Roll Your Mouse Over The Boxes</h1>
+            <div></div>
+		</main>
+        <script>
+            let heading = document.querySelector('h1');
+            let box = document.querySelector('div');
+            
+            box.addEventListener('mouseover', function() {
+                heading.textContent = "The mouse is over the box!";
+            });
+            
+            box.addEventListener('mouseout', function() {
+                heading.textContent = "The mouse has left the box!";
+            });
+
+            heading.addEventListener('mouseover', function () {
+                heading.textContent = "Roll your mouse over the boxes";
+            });
+        </script>
+	</body>
+</html>

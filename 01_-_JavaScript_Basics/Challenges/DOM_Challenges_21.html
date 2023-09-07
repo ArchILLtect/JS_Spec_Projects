@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>DOM Challenges</title>
+    </head>
+
+	<body>
+		<main>
+			<h1>Javascript Event Challenges</h1>
+			<p>Here is a paragraph of text</p>
+			<button>Turn Green Dammit!</button>
+		</main>
+
+		<script>
+			let btn = document.querySelector('button');
+			let para = document.querySelector('p');
+
+			btn.addEventListener('click', function() {
+				para.style.color = "green";
+			})
+		</script>
+	</body>
+</html>

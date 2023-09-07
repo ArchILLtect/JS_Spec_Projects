@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript Events</title>
+        <style>
+            div {
+                width: 50px;
+                height: 5000px;
+                background-color: red;
+            }
+        </style>
+    </head>
+
+	<body>
+		<main>
+            <h1>Keydown Event</h1>
+            <p>Press a key on your keyboard</p>
+		</main>
+        <script>
+
+            document.addEventListener('keydown', function(e) {
+                console.log(`The ${e.key} key was pressed`);
+            })
+
+        </script>
+	</body>
+</html>

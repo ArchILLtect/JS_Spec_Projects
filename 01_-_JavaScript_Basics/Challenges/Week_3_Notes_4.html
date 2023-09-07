@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript Events</title>
+        <style>
+            div {
+                width: 50px;
+                height: 5000px;
+                background-color: red;
+            }
+        </style>
+    </head>
+
+	<body>
+		<main>
+            <h1>Window Resizing</h1>
+            <p>Resize the window and watch the console</p>
+		</main>
+        <script>
+
+            window.addEventListener('resize', function() {
+                console.log(`Page width is ${window.innerWidth}`);
+                console.log(`Page height is ${window.innerHeight}`);
+            })
+
+        </script>
+	</body>
+</html>
