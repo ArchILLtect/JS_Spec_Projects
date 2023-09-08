@@ -9,7 +9,7 @@ body {
 	padding:50px 0;
 }
 
-h1, h2, h3, h4 {
+h1, h3, h4 {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
 }
@@ -22,7 +22,9 @@ h1 {
 }
 
 h2 {
+  font-family: 'Oswald', sans-serif;
 	font-size:130%;
+  font-weight: 900;
 }
 
 .invisible {
@@ -75,13 +77,15 @@ input[type="text"] {
 
 input[type="text"]:focus{
   border: 1px solid #33C3F0;
-  outline: 0; }
+  outline: 0;
+}
   
-label{
+label {
   display: block;
   margin-bottom: .5rem;
   font-weight: 600; 
 }
+
 
 
 /* Buttons
