@@ -1,0 +1,34 @@
+<!-- Created on 9/08/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 1 - "Javascript Basics" -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript vs. JQuery Challenges</title>
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src=""></script>
+
+    </head>
+
+	<body>
+
+        <nav>
+            <ul>
+                <li><a href="#">link one</a></li>
+                <li><a href="#">link two</a></li>
+                <li><a href="#">link three</a></li>
+                <li><a href="#">link four</a></li>
+                <li><a href="#">link five</a></li>
+            </ul>
+        </nav>
+        <p id="paragraph">Click a link to change this paragraph</p>
+
+		<script>
+
+            $('ul li a').on('click', function() {
+                $('#paragraph').text(`You clicked ${$(this).html()}`);
+            })
+
+		</script>
+	</body>
+</html>

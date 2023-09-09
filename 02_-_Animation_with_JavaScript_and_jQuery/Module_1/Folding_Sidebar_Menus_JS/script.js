@@ -1,4 +1,4 @@
-// Created on 9/08/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery"
+// Created on 9/09/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery"
 
 		
 const submenus = document.querySelectorAll('ul li ul');

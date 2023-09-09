@@ -1,0 +1,32 @@
+<!-- Created on 9/08/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 1 - "Javascript Basics" -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript vs. JQuery Challenges</title>
+
+        <script src=""></script>
+        
+    </head>
+
+	<body>
+
+        <p>Don't change this paragraph</p>
+        <div id="main">
+            <p>change this paragraph.</p>
+            <p>change this paragraph too.</p>
+            <p>And change this last paragraph.</p>
+        </div>
+
+		<script>
+
+            let pChild = document.querySelector('#main').children[2];
+            let pChild2 = document.querySelector('#main p:last-of-type');
+
+            pChild.style.fontSize = "24px";
+            pChild2.style.color = "red";
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- Created on 9/08/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 1 - "Javascript Basics" -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript vs. JQuery Challenges</title>
+
+        <script src=""></script>
+
+    </head>
+
+	<body>
+
+        <p>don't change this paragraph</p>
+        <div id="main">
+            <p>Here is paragraph one</p>
+            <p>Here is paragraph two</p>
+            <p>Here is paragraph three</p>
+            <p>Here is paragraph four</p>
+            <p>Here is paragraph five</p>
+            <p>Llamas and Chickens!</p>
+            <p>Here is paragraph seven</p>
+            <p>Here is paragraph eight</p>
+            <p>Here is paragraph nine</p>
+            <p>Here is paragraph ten</p>
+            <p>Here is paragraph eleven</p>
+            <p>Here is paragraph twelve</p>
+        </div>
+
+		<script>
+
+            let paras = document.querySelectorAll('#main p');
+
+            
+            for ( para of paras ){
+                if ( para.textContent === "Llamas and Chickens!" ) {
+                    para.style.color = 'red';
+                }
+            }
+            
+            /*
+            for (var i = 0; i < paras.length; i++) {
+                if (paras[i].innerHTML == "Llamas and Chickens!") {
+                    paras[i].style.color = "red";
+                }
+            }
+            */
+		</script>
+	</body>
+</html>

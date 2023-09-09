@@ -1,0 +1,41 @@
+<!-- Created on 9/08/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 1 - "Javascript Basics" -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript vs. JQuery Challenges</title>
+
+        <script src=""></script>
+
+    </head>
+
+	<body>
+
+        <p>don't change this paragraph</p>
+        <div id="main">
+            <p>Here is paragraph one</p>
+            <p>Here is paragraph two</p>
+            <p>Here is paragraph three</p>
+            <p>Here is paragraph four</p>
+            <p>Here is paragraph five</p>
+            <p>Here is paragraph six</p>
+            <p>Here is paragraph seven</p>
+            <p>Here is paragraph eight</p>
+            <p>Here is paragraph nine</p>
+            <p>Here is paragraph ten</p>
+            <p>Here is paragraph eleven</p>
+            <p>Here is paragraph twelve</p>
+        </div>
+
+		<script>
+
+            let evenParas = document.querySelectorAll('#main p:nth-child(even)');
+
+            for ( currentPara of evenParas ) {
+                currentPara.style.color = "red";
+            }
+
+		</script>
+	</body>
+</html>

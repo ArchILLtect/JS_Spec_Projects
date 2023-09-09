@@ -1,0 +1,38 @@
+<!-- Created on 9/08/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 1 - "Javascript Basics" -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript vs. JQuery Challenges</title>
+
+        <script src=""></script>
+
+    </head>
+
+	<body>
+
+        <nav>
+            <ul>
+                <li><a href="#">link one</a></li>
+                <li><a href="#">link two</a></li>
+                <li><a href="#">link three</a></li>
+                <li><a href="#">link four</a></li>
+                <li><a href="#">link five</a></li>
+            </ul>
+        </nav>
+        <p>Here is a paragraph with a <a href="http://google.com">link to google</a> in it</p>
+
+		<script>
+
+            const navLinks = document.querySelectorAll('li a');
+
+            for ( currentLink of navLinks ) {
+                currentLink.addEventListener('click', function() {
+                    alert("Clicked!");
+                })
+            }
+ 
+		</script>
+	</body>
+</html>

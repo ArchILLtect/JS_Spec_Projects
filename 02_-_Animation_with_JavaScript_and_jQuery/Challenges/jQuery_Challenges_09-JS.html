@@ -1,0 +1,40 @@
+<!-- Created on 9/08/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 1 - "Javascript Basics" -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JavaScript vs. JQuery Challenges</title>
+
+        <script src=""></script>
+
+    </head>
+
+	<body>
+
+        <nav>
+            <ul>
+                <li><a href="#">link one</a></li>
+                <li><a href="#">link two</a></li>
+                <li><a href="#">link three</a></li>
+                <li><a href="#">link four</a></li>
+                <li><a href="#">link five</a></li>
+            </ul>
+        </nav>
+        <p id="paragraph">Click a link to change this paragraph</p>
+
+		<script>
+
+            const navLinks = document.querySelectorAll('li a');
+
+            for ( currentLink of navLinks ) {
+                currentLink.addEventListener('click', function() {
+                    const printTo = document.querySelector('#paragraph');
+                    //printTo.textContent = `You clicked ${event.target.textContent}.`
+                    printTo.innerHTML = `You clicked ${this.textContent}.`
+                })
+            }
+ 
+		</script>
+	</body>
+</html>
