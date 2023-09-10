@@ -45,7 +45,18 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script>
-        
+        $('#hidebox').on('click', function() {
+			$('#box').hide(500);
+		})
+
+		$('#showbox').on('click', function() {
+			$('#box').show(500);
+		})
+
+		$('#togglebox').on('click', function() {
+			$('#box').toggle(500, function() { alert('Done!') } );
+		})
+
     </script>
 
 </body>

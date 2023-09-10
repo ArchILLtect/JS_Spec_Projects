@@ -29,7 +29,9 @@
 			height:260px; 
 			background:#4C90D8; 
 			padding:20px;
-			color:#fff; 
+			color:#fff;
+			position: absolute;
+			left: 50px;
 		}
 
 	</style>
@@ -53,7 +55,34 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script>
-        
+		$('#growbox').on('click', function() {
+			$('#box').animate({ width: "710px" });
+		})
+
+		$('#growtext').on('click', function() {
+			$('#box').animate({ fontSize: "30px" });
+		})
+
+		$('#movebox').on('click', function() {
+			$('#box').animate({ left: "+=300px" }, 1500, "linear" );
+		})
+
+		$('#doall').on('click', function() {
+			$('#box').animate({ width: "+=710px", fontSize: "+=30px", left: "+=300px" }, 1500 );
+		})
+
+		$('#sequence').on('click', function() {
+			$('#box').animate({ width: "710px" }).animate({ fontSize: "30px" }).animate({ left: "+=300px" }, 1500 )
+		})
+
+		$('#sequence').on('click', function() {
+			$('#box').animate({ width: "710px"}, function() {
+				$('#box').animate({ fontSize: "30px" }, function() {
+					$('#box').animate({ left: "+=300px" }, 1500, "linear" )
+				})
+
+			})
+		});
     </script>
 
 </body>
