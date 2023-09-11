@@ -53,4 +53,4 @@ p {
 
 #tabs .hidden { display: none; }
 #tabs .visible { display: block; }
-#tabs .visuallyhidden { opacity: 0ms; }
+#tabs .visuallyhidden { opacity: 0; }
