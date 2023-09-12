@@ -18,7 +18,7 @@
 			width:500px;
 			height:500px;
 			background:#1B2F6B;
-			transition: all 2s;
+			transition :all 2s;
 		}
 	</style>
 
@@ -30,7 +30,9 @@
 	<script>
 		var theDiv = document.getElementById("thediv");
 
-		setTimeout( function(){ theDiv.setAttribute("class", "two"); }, 2000  );
+		setTimeout( function(){ theDiv.setAttribute("class", "two"); }, 2000,  );
+
+		setTimeout( function(){ theDiv.setAttribute("class", "one"); }, 4000  );
 	</script>
 
 </body>

@@ -3,6 +3,18 @@
 (function(){
 	"use strict";
 	
-	
+
+	const allComments  = document.querySelectorAll('p');
+	const firstComment = document.querySelector('#container > p')
+	const lastComment = allComments.length - 1;
+	let counter = 1;
+
+	function contentRotator() {
+		$(firstComment).fadeIn( 2000 );
+		
+
+
+	};
+	contentRotator();
 
 }());

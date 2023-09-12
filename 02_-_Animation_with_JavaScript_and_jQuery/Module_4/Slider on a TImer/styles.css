@@ -1,0 +1,75 @@
+/* Created on 9/09/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" */
+
+body {
+	margin: 0;
+	padding: 100px;
+	background: #717171; }
+
+#content {
+	margin: 100px auto 5px auto;
+	border: 10px solid #4C4C4C;
+	width: 400px;
+	height: 266px;
+	position: relative;
+}
+
+#content img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+p { text-align: center; }
+
+.captionText {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+
+
+/********** Link Styles ***********/
+
+#links {
+	width: 420px;
+	display: flex;
+	margin: auto;
+}
+
+#links a {
+	display: block;
+	flex: 1;
+	background: #6C0204;
+	height: 50px;
+	line-height: 50px;
+	color: #D5D5D5;
+	text-decoration: none;
+	font-family: Arial;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#links a:hover {
+	background: #A51D1F;
+	color: #fff;
+}
+
+/************ Animation Styles ************/
+
+.buttonReady {
+	border: 1px solid black;
+	box-shadow: 0px 0px 22px 1px rgba(0,0,0,0.75);
+}
+
+.fadeinimg {
+	animation: fadein 1s;
+}
+
+@keyframes fadein {
+	from{
+	opacity: 0;
+	}
+	to {
+	opacity: 1;
+	}
+}
