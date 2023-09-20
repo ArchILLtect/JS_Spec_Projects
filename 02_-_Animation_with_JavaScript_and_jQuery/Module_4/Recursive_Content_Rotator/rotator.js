@@ -3,18 +3,65 @@
 (function(){
 	"use strict";
 	
-
-	const allComments  = document.querySelectorAll('p');
-	const firstComment = document.querySelector('#container > p')
-	const lastComment = allComments.length - 1;
 	let counter = 1;
 
 	function contentRotator() {
-		$(firstComment).fadeIn( 2000 );
-		
+		$(`#container p:nth-child(${counter})`).fadeIn(2000, function(){
+
+			if( $(this).is("#container p:last-child") ) {
+				setTimeout( function() {
+					$(`#container p:nth-child(${counter})`).fadeOut(2000, function() {
+						counter = 1;
+						contentRotator();
+					} );
+				}, 7000 );
+			} else {
+				setTimeout ( function() {
+					$(`#container p:nth-child(${counter})`).fadeOut(2000, function() {
+						counter ++;
+						contentRotator();
+					});
+				}, 7000 );
+			}
 
 
+
+		});
 	};
+
+
+
 	contentRotator();
+
+	// const allComments  = $('p');
+	// const lastComment = allComments.length - 1;
+	// const firstComment = $('#container > p:first')
+	// let counter = 1;
+	// console.log(allComments)
+	// console.log(lastComment)
+
+	// function contentRotator() {
+	// 	$( firstComment ).fadeIn( 2000 );	
+		
+	// 	for ( curComment of allComments ) {
+
+			
+
+	// 		if ( curComment = lastComment ) {
+	// 			setTimeout( function() { 
+	// 				$( curComment ).fadeOut( 1500 )
+	// 				contentRotator, 2000 }
+	// 				)
+				
+	// 		} else {
+	// 			setTimeout ( function() {
+	// 				$( curComment ).fadeOut( 1500 ), 2000
+	// 			})
+	// 		}
+	// 	}
+
+
+	// };
+	// contentRotator();
 
 }());

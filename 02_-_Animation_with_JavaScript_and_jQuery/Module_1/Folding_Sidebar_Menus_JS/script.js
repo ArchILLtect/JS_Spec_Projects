@@ -5,6 +5,7 @@ const submenus = document.querySelectorAll('ul li ul');
 
 function openMenu() {
     const menuItems = document.querySelectorAll('.menulink');
+    console.log(menuItems)
 
     for ( menuItem of menuItems ) {
         menuItem.addEventListener('click', function( event ) {
