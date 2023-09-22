@@ -10,6 +10,5 @@ $('nav ul li a').on('click', function() {
         800, "easeOutCirc", function() {
             $('nav ul li a').removeAttr('class');
             $(thisLink).addClass("selected");
-            // alert( $(window).scrollTop() );
         } );
 } );
