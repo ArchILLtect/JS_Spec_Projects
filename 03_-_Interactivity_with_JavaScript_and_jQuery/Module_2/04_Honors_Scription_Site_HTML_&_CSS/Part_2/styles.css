@@ -159,6 +159,11 @@ header nav ul li a {
 }
 
 .slide1 { background-image: url("images/slider/slider01-small.jpg"); }
+.slide2 { background-image: url("images/slider/slider02-small.jpg"); }
+.slide3 { background-image: url("images/slider/slider03-small.jpg"); }
+.slide4 { background-image: url("images/slider/slider04-small.jpg"); }
+.slide5 { background-image: url("images/slider/slider05-small.jpg"); }
+.slide6 { background-image: url("images/slider/slider06-small.jpg"); }
 /*Add styling for additional slide backgrounds*/
 
 #slider .cta {
@@ -178,6 +183,11 @@ header nav ul li a {
 }
 
 /*Add three rules for flexslider*/
+.flexslider {
+	margin: 0 20px;
+	border: none;
+	border-radius: 0;
+}
 
 /************ Overview Styles *************/
 
@@ -368,6 +378,14 @@ header nav ul li a {
 
 /* Add two rotator rules */
 
+#rotator {
+	min-height: 350px;
+}
+
+#rotator blockquote {
+		display: none;
+}
+
 #listen blockquote {
 	font-size: 28px;
 	line-height: 1.3em;
@@ -531,6 +549,7 @@ footer article a {
 	#pricing .container article button{ position: absolute; bottom: 0;}
 	
 	/* Listen styles */
+	#rotator { min-height: 550px; }
 	#listen article:first-of-type { flex: 1; }
 	#listen article:last-of-type { flex: 4; }
 	#listen blockquote { font-size: 36px; }
