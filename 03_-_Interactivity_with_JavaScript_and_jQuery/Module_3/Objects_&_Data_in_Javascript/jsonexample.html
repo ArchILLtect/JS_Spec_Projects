@@ -1,3 +1,5 @@
+<!-- Created on 9/21/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" -->
+
 <!doctype html>
 <html>
 <head>
@@ -13,8 +15,17 @@
 	
 	<script>
 		
-		var json = '{ "first_name": "Joe", "last_name": "Jones", "age": 25, "social_media": [ "facebook", "Twitter", "Instagram" ], "online": true, "phone_numbers": { "home": "916-123-4567", "work": "916-321-9876", "mobile": "530-212-1111" }, "status": "active" }';
+		let json = '{ "first_name": "Joe", "last_name": "Jones", "age": 25, "social_media": [ "facebook", "Twitter", "Instagram" ], "online": true, "phone_numbers": { "home": "916-123-4567", "work": "916-321-9876", "mobile": "530-212-1111" }, "status": "active" }';
 	
+		let user = JSON.parse(json);
+
+		console.log(json);
+		console.log(user);
+
+		let data = JSON.stringify(user);
+
+		console.log(data);
+
 	</script>
 	
 </body>

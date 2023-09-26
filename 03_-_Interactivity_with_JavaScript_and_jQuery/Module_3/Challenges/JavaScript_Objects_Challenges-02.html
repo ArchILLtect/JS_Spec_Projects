@@ -1,0 +1,43 @@
+<!-- Created on 9/21/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Challenge 02</h1>
+
+    <script>
+    let pet1 = {
+        name: "Shadow",
+        type: "cat",
+        species: "Bombay",
+        sex: "female",
+        pronoun1: "she",
+        pronoun2: "her"
+    };
+    
+    let pet2 = {
+        name: "something",
+        type: "something",
+        species: "Unknown",
+        sex: "female",
+        pronoun1: "she",
+        pronoun2: "her"
+    };
+
+    console.log(`I have a pet ${pet1.type} named ${pet1.name} - ${pet1.pronoun1} is a ${pet1.sex} and ${pet1.pronoun2} species is ${pet1.species}.`);
+    console.log(`I have a pet ${pet2.type} named ${pet2.name} - ${pet2.pronoun1} is a ${pet2.sex} and ${pet2.pronoun2} species is ${pet2.species}.`);
+
+    pet2.name = "Yui";
+    pet2.type = "cat";
+    pet2.species = "American Shorthair";
+
+    console.log(`I have a pet ${pet2.type} named ${pet2.name} - ${pet2.pronoun1} is a ${pet2.sex} and ${pet2.pronoun2} species is ${pet2.species}.`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- Created on 9/21/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Challenge 03</h1>
+
+    <script>
+    let pet1 = {
+        name: "Shadow",
+        type: "cat",
+        species: "Bombay",
+        sex: "female",
+        pronoun1: "she",
+        pronoun2: "her",
+        qualities: {
+            color: "black",
+            disposition: "lazy and loving",
+            size: "medium"
+        }
+
+    };
+    
+    let pet2 = {
+        name: "something",
+        type: "something",
+        species: "Unknown",
+        sex: "female",
+        pronoun1: "she",
+        pronoun2: "her",
+        qualities: {
+            color: "calico",
+            disposition: "a sassy but friendly princess",
+            size: "medium"
+        }
+    };
+
+    console.log(`I have a pet ${pet1.type} named ${pet1.name} - ${pet1.pronoun1} is a ${pet1.qualities.size} ${pet1.qualities.color} ${pet1.sex} and ${pet1.pronoun2} species is ${pet1.species}. Also, ${pet1.pronoun1} is ${pet1.qualities.disposition}.`);
+    console.log(`I have a pet ${pet2.type} named ${pet2.name} - ${pet2.pronoun1} is a ${pet2.qualities.size} ${pet2.qualities.color} ${pet2.sex} and ${pet2.pronoun2} species is ${pet2.species}. Also, ${pet2.pronoun1} is ${pet2.qualities.disposition}.`);
+
+    pet2.name = "Yui";
+    pet2.type = "cat";
+    pet2.species = "American Shorthair";
+
+    console.log(`I have a pet ${pet2.type} named ${pet2.name} - ${pet2.pronoun1} is a ${pet2.qualities.size} ${pet2.qualities.color} ${pet2.sex} and ${pet2.pronoun2} species is ${pet2.species}. Also, ${pet2.pronoun1} is ${pet2.qualities.disposition}.`);
+    console.log( pet1 )
+    console.log( pet2 )
+
+    </script>
+</body>
+</html>

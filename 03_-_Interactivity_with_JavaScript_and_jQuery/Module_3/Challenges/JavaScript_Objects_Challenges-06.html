@@ -1,0 +1,74 @@
+<!-- Created on 9/21/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Challenge 06</h1>
+
+    <script>
+
+        function Pet( name, species, greeting ) {
+            this.name = name;
+            this.species = species;
+            this.greeting = function() { console.log( greeting ) }
+        };
+
+        let pet1 = new Pet( "Shadow", "cat", "...awkward stare..." )
+        let pet2 = new Pet( "Yui", "cat", "Meow, meow, Meeeeeeoooooooow!" )
+
+        console.log( `I have a ${pet1.species} named ${pet1.name}` );
+        console.log( `I have a ${pet2.species} named ${pet2.name}` );
+
+
+/*     let pet1 = {
+        name: "Shadow",
+        type: "cat",
+        species: "Bombay",
+        sex: "female",
+        pronoun1: "she",
+        pronoun2: "her",
+        qualities: {
+            color: "black",
+            disposition: "lazy and loving",
+            size: "medium",
+            supplies: [
+                "food",
+                "catnip",
+                "treats",
+                "brush",
+                "toy"
+            ]
+        },
+        greeting: function() { console.log( "...awkward stare..." ) }
+    };
+    
+    let pet2 = {
+        name: "Yui",
+        type: "cat",
+        species: "American Shorthair",
+        sex: "female",
+        pronoun1: "she",
+        pronoun2: "her",
+        qualities: {
+            color: "calico",
+            disposition: "a sassy but friendly princess",
+            size: "medium",
+        }
+    };
+
+    pet2.qualities.supplies = [ "food", "catnip", "treats", "brush", "toy" ];
+    pet2.greeting = function() { console.log("meow, meow, meeeeeeeeeooooow!") };
+*/
+    pet1.greeting();
+    pet2.greeting();
+
+    console.log(pet1);
+    console.log(pet2); 
+    </script>
+</body>
+</html>

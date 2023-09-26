@@ -1,0 +1,48 @@
+<!-- Created on 9/21/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 07</title>
+</head>
+<body>
+    <h1>Challenge 07</h1>
+
+    <form id ="addPet">
+        <p><label>Name <input type="text" id="name"></label></p>
+        <p><label>Species <input type="text" id="species"></label></p>
+        <p><label>Greeting <input type="text" id="greeting"></label></p>
+        <p><input type="submit" value="Add Pet"></label></p>
+    </form>
+
+    <script>
+
+        let petForm = document.getElementById('addPet');
+        let formSubmit = document.querySelector('form p:last-child input');
+        let petName = document.getElementById('name');
+        let petSpecies = document.getElementById('species');
+        let petGreeting = document.getElementById('greeting');
+
+
+        petForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            function Pet() {
+            this.name = petName.value;
+            this.species = petSpecies.value;
+            this.greeting = function() { alert( petGreeting.value ) }
+            }
+            
+            let myPet = new Pet;
+            
+            console.log(myPet);
+            console.log(`I have a ${myPet.species} named ${myPet.name}. When I get home she gives me a:`);
+            myPet.greeting();
+
+        });
+
+    </script>
+</body>
+</html>
