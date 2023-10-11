@@ -1,0 +1,61 @@
+<!-- Created on 10/11/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+
+    <script>
+
+/*         function makeUpperCase(aString) {
+            return aString.toUpperCase();
+        }
+
+        console.log(makeUpperCase("here is a string"));
+*/
+
+        const makeUpperCase = aString => aString.toUpperCase();
+        
+        console.log(makeUpperCase("here is a string"));
+
+        const fullName1 = (fname, lname) => `${fname} ${lname}`;
+
+        console.log(fullName1('Nick', 'Hanson'));
+
+        const fullName2 = () => {
+            const fname = "Nick";
+            const lname = "Hanson";
+            return `${fname} ${lname}`;
+        };
+
+        console.log(fullName2());
+
+        const fruit = ["banana", "apple", "lemon", "kiwi"];
+        const upperFruit = [];
+        fruit.forEach( thisFruit => {
+            upperFruit.push(thisFruit.toUpperCase());
+            }
+        );
+
+        console.log(upperFruit);
+
+        const Employee = function( fname, lname, jobTitle ){
+            this.fname = fname;
+            this.lname = lname;
+            this.position = jobTitle;
+            this.fullName = () => `${fname} ${lname}`;
+
+        };
+
+        const id1234 = new Employee('Bob', 'Smith', 'Mechanic');
+        console.log( id1234.fname );
+        console.log( id1234.fullName() );
+
+    </script>
+</body>
+</html>
