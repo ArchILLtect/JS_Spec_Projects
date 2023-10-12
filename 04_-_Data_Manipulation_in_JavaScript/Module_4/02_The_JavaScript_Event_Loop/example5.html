@@ -25,6 +25,7 @@
         console.log(`finishing async2 after ${rand2} seconds`);
         }, rand2 * 1000);
         console.log("do this last");
+        setTimeout(function () { console.log('this has run') }, 1000);
     </script>
 </body>
 
