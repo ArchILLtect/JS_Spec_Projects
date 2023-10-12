@@ -1,3 +1,5 @@
+/* Created on 10/11/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" */
+
 (function () {
 
 	"use strict";
@@ -54,10 +56,35 @@
 	// This displays error / success messages
 	function displayMessage(field, message) {
 		// puts messages in the DOM
+		document.getElementById('message').className = "show-message";
+		document.getElementById('message').innerHTML = message;
+		setTimeout(function () {
+			document.getElementById('message').classList.add("fadeOutElement");
+			setTimeout(function () {
+				if (field != 'success') {
+					document.getElementById('message').className = "hide-message";
+					document.getElementById(field.id).focus();
+				} else {
+					document.getElementById('message').setAttribute('class', "hide-message");
+					document.getElementById('name').value = '';
+					document.getElementById('email').value = '';
+					document.getElementById('comment').value = '';
+				}
+			}, 2000);
+		}, 2000);
 	}
 
 	function sendData() {
 		// actually sends the data asynchronously
+		document.getElementById('message').className = "show-message";
+		document.getElementById('message').innerHTML = feedBackMessage[4];
+		setTimeout(async function () {
+			const formdata = new FormData(contactForm);
+			const fetchPromise = await fetch(emailFormProcessor, { method: 'POST', body: formdata });
+			const data = await fetchPromise.json();
+			//console.log(data.result);
+			if (data.result == "success") { displayMessage('success', feedBackMessage[3]); }
+		}, 2000);
 	}
 
 }());

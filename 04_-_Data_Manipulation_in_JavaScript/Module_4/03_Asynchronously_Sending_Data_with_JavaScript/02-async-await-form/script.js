@@ -1,3 +1,5 @@
+/* Created on 10/11/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" */
+
 (function () {
 
 	"use strict";
@@ -53,6 +55,12 @@
 
 	async function sendData() {
 		// send data and get response...
+		const data = new FormData(contactForm);
+		const fetchPromise = await fetch(formProcessorUrl, { method: 'POST', body: data });
+		const content = await fetchPromise.text();
+		document.getElementById('formdata').innerHTML = content;
+		const fields = document.querySelectorAll('.data');
+		fields.forEach(eachField => { eachField.value = ''; })
 	}
 
 }());

@@ -1,5 +1,26 @@
-// add script here
+/* Created on 10/11/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" */
 
+const formDataURL = "https://cpe-web-assignments.ucdavis.edu/formprocessing/processor.php";
+
+$('#formdata').load(formDataURL);
+
+$('#myForm').validate();
+
+$('#myForm').on('submit', function( event ) {
+
+ 	event.preventDefault();
+
+	if($('#myForm').valid() == true) {
+		let dataString = $(this).serialize();
+		//console.log(dataString);
+		$.ajax({
+			type: "POST",
+			url: formDataURL,
+			data: dataString,
+			success: function (data) { $('#formdata').html(data); $('#myForm').clearForm(); }
+		});
+	}
+} );
 
 $.fn.clearForm = function () {
 	return this.each(function () {

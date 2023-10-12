@@ -1,3 +1,5 @@
+<!-- Created on 10/11/23 by ArchILLtect for the Coursera program "Javascript for Beginners Specialization" - Course 2 - "Animation with JavaScript and JQuery" -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +13,20 @@
     <h1>Event Example 2</h1>
     <script>
         // JS here
+        function mkUpperCase(message) {
+        const upper = message.toUpperCase();
+        return upper;
+        }
+        function mkLowerCase(message) {
+        const lower = message.toLowerCase();
+        return lower;
+        }
+        function outputMessages(message) {
+        let output = `Uppercase version: ${mkUpperCase(message)}\n`;
+        output += `Lowercase version: ${mkLowerCase(message)}`;
+        console.log(output);
+        }
+        outputMessages('Llamas are THE best!');
     </script>
 </body>
 
