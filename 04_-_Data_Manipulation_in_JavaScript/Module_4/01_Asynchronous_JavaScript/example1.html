@@ -27,12 +27,25 @@
         document.getElementById('loaddata').addEventListener('click', getData);
         // AJAX function for getting data from the file...
         function getData() {
-            // add xhr request code here...
+            const req = new XMLHttpRequest();
+            const url = "https://cpe-web-assignments.ucdavis.edu/remotedata/index.php";
+            req.onreadystatechange = function () {
+            useResponse(req);
+            };
+            req.open("GET", url, true);
+            req.send(null);
         }
 
         // AJAX function that processes the data when successfully recieved.
         function useResponse(req) {
-            // Add use response code here...
+            if (req.readyState == 4) {
+            if (req.status == 200) {
+            document.getElementById("remotedata").innerHTML = req.responseText;
+            }
+            }
+            else {
+            document.getElementById('remotedata').innerHTML = '<img src="images/spinner.gif">';
+            }
         }
 
         // Handling buttons
